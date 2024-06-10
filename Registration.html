@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Registration Form</title>
+  <body>
+  <video autoplay muted loop id="myVideo">
+    <source src="c:\Users\LabUser\Desktop\berry.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  </body>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: relative;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+h1{
+    color:rgb(33, 4, 39);
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+
+  color:rgb(8, 151, 96);
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #fff;
+}
+</style>
+<body>
+  <divclass= "content">
+  <h1>Registration Form</h1>
+  <form action="LoginSuccess.html" registrationForm" onsubmit="return validateForm()">
+    <label for="Studentname:">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+    <h1> </h1>
+
+    <label for="Collegename:">Collegename:</label>
+    <input type="collegename" id="collegename" name="collegename" required><br>
+    <h1> </h1>
+
+    <label for="Address:">Addresss:</label>
+    <input type="address" id="address" name="address" required><br>
+    <h1> </h1>
+
+    <label for="PhoneNumber">PhoneNumber:</label>
+    <input type="phonenumber" id="phonenumber" name="phonenumber" required><br>
+    <h1> </h1>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <script>
+    function validateForm() {
+      const username = document.getElementById('Studentname').value;
+      const email = document.getElementById('collegename').value;
+      const password = document.getElementById('Address').value;
+      const confirmPassword = document.getElementById('Phonenumber').value;
+
+      
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+
+      
+      if (username.length < 4 || username.length > 20) {
+        alert("Username must be between 4 and 20 characters");
+        return false;
+      }
+
+      if (!validateEmail(email)) {
+        alert("Invalid email format");
+        return false;
+      }
+
+      return true;
+    }
+    </script>
+    <body>
+    <audio controls>
+        <source src="sample-3s (1).mp3" type="audio/mpeg">
+    </audio>
+</body>
+</body>
+</html>
